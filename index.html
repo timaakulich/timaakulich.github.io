@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata'
+          rel='stylesheet'>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>CV | Timophey Akulich</title>
+</head>
+<body>
+<div id="app">
+    <header>
+        <div class="row title">
+            <div class="col col1 center">
+                <span class="avatar"></span>
+            </div>
+            <div class="col col6">
+                <h1>Timophey Akulich</h1>
+                <h2>Lead Software Engineer</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col col2">
+                <div class="group">
+                    <h3>Profile</h3>
+                    <p>
+                        Experienced Web Developer with a demonstrated history
+                        of
+                        working in the computer games industry.
+                    </p>
+                    <p>
+                        Skilled in Python, PostgreSQL, SQL, JavaScript. Strong
+                        engineering professional with a Bachelor's degree
+                        focused in
+                        computer science from Faculty of Applied Mathematics
+                        and
+                        Computer Science of BSU.
+                    </p>
+                    <p>
+                        Creative, witty, goal-oriented person. I like to solve
+                        non-standard tasks. Quickly learn new technologies.
+                    </p>
+                    <p>
+                        English level - B2
+                    </p>
+                </div>
+                <div class="group">
+                    <h3>Skills</h3>
+                    <template v-for="name in skills">
+                        <a :href="'https://www.google.com/search?q=' + name" target="_blank" class="skill">{{ name }}</a> /
+                    </template>
+                </div>
+                <div class="group">
+                    <h3>Personal details</h3>
+                    <div>
+                        <h4>Birth date</h4>
+                        <p>12 / 12 / 1993</p>
+                    </div>
+                    <div>
+                        <h4>Nationality</h4>
+                        <p>Belarus</p>
+                    </div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Minsk, Belarus</p>
+                    </div>
+                </div>
+                <div class="group">
+                    <h3>Contact</h3>
+                    <div class="margin5">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tima.akulich@gmail.com"
+                           target="_blank">tima.akulich@gmail.com</a>
+                    </div>
+                    <div class="margin5">
+                        <i class="fab fa-telegram"></i>
+                        <a href="https://t.me/akulich"
+                           target="_blank">@akulich</a>
+                    </div>
+                    <div class="margin5">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/timophey-akulich"
+                           target="_blank">linkedin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col col6">
+                <div class="group">
+                    <h3>Professional experience</h3>
+                    <div class="experience">
+                        <div v-for="company in companies" class="experience-item">
+                            <div class="experience-item-content">
+                                <div class="experience-item-company">
+                                    <img class="company-logo" :src="company.logo">
+                                    <h4>{{ company.position }}</h4>
+                                    <a class="company-name" :href="company.url" target="_blank">{{ company.name }}</a>
+                                    <span class="years">{{ company.years }}</span>
+                                </div>
+                                <div>
+                                    <p class="no-margin">Responsibilities:</p>
+                                    <ul class="no-margin">
+                                        <li v-for="responsibility in company.responsibilities">
+                                            {{ responsibility }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div v-if="company.projects && company.projects.length">
+                                    <button v-if="!opened" class="projects-button" @click="opened = company.id">
+                                        <i class="fas fa-chevron-down"></i>
+                                        Projects
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <button v-else  class="projects-button" @click="opened = null">
+                                        <i class="fas fa-chevron-up"></i>
+                                        Projects
+                                        <i class="fas fa-chevron-up"></i>
+                                    </button>
+                                    <table v-if="opened === company.id" class="projects-table">
+                                        <thead>
+                                            <tr>
+                                                <th class="project-column">Project</th>
+                                                <th class="images-column">Images</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="project in company.projects">
+                                                <td class="project-column">
+                                                    {{ project.description }}
+                                                </td>
+                                                <td class="images-column">
+                                                    <img class="image-preview" v-for="(image, i) in project.images" :src="image" :key="i" @click="index = i"/>
+                                                    <vue-gallery-slideshow :images="project.images" :index="index" @close="index = null"></vue-gallery-slideshow>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <h3>Education</h3>
+                    <div class="experience">
+                        <div v-for="university in education" class="experience-item">
+                            <div class="experience-item-content">
+                                <div class="experience-item-company">
+                                    <img class="company-logo" :src="university.logo">
+                                    <h4>{{ university.degree }}</h4>
+                                    <h5>{{ university.name }}</h5>
+                                    <span class="years">{{ university.years }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://unpkg.com/vue-gallery-slideshow"></script>
+<script defer src="static/js/app.js"></script>
+</body>
+</html>

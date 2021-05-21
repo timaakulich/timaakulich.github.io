@@ -132,8 +132,7 @@
                                                     {{ project.description }}
                                                 </td>
                                                 <td class="images-column">
-                                                    <img class="image-preview" v-for="(image, i) in project.images" :src="image" :key="i" @click="index = i"/>
-                                                    <vue-gallery-slideshow :images="project.images" :index="index" @close="index = null"></vue-gallery-slideshow>
+                                                    <img class="image-preview" v-for="(image, i) in project.images" :src="image.url" :key="image.id" @click="index = image.id"/>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -161,6 +160,7 @@
             </div>
         </div>
     </main>
+    <vue-gallery-slideshow :images="allImages.map(image => image.url)" :index="index" @close="index = null"></vue-gallery-slideshow>
     <footer>
         <span>© Timophey Akulich / 2021</span>
         <a class="top-button" href="#app"><i class="fas fa-chevron-up"></i></a>

@@ -16,6 +16,14 @@ window.app = new Vue({
             "Web Development", "Architecture Development", "Linux",
             "RESTful API", "XML rpc", "JSON rpc", "websockets"
         ],
+        allImages: [
+            {"id": 0, "url": "static/img/profile/1.png"},
+            {"id": 1, "url": "static/img/profile/2.png"},
+            {"id": 2, "url": "static/img/profile/3.png"},
+            {"id": 3, "url": "static/img/tournaments/1.png"},
+            {"id": 4, "url": "static/img/tournaments/2.png"},
+            {"id": 5, "url": "static/img/tournaments/3.png"},
+        ],
         companies: [
             {
                 id: 1,
@@ -39,9 +47,9 @@ window.app = new Vue({
                             "This web application collects information about each user in the game, information about user's vehicles. Information updates in realtime.\n" +
                             "Information is collected for the last 30 days, 30 weeks and for all months from the moment the service is launched. It is collcted for players and them vehicles",
                         images: [
-                            "static/img/profile/1.png",
-                            "static/img/profile/2.png",
-                            "static/img/profile/3.png"
+                            {"id": 0, "url": "static/img/profile/1.png"},
+                            {"id": 1, "url": "static/img/profile/2.png"},
+                            {"id": 2, "url": "static/img/profile/3.png"},
                         ]
                     },
                     {
@@ -49,9 +57,9 @@ window.app = new Vue({
                             "On this page users can view all tournaments (past/current/upcoming). View teams, grids, leaderboard tables and etc. \n" +
                             "They can watch streams on this page and get reward for time viewed.",
                         images: [
-                            "static/img/tournaments/1.png",
-                            "static/img/tournaments/2.png",
-                            "static/img/tournaments/3.png"
+                            {"id": 3, "url": "static/img/tournaments/1.png"},
+                            {"id": 4, "url": "static/img/tournaments/2.png"},
+                            {"id": 5, "url": "static/img/tournaments/3.png"},
                         ]
                     }
                 ]

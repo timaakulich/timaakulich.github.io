@@ -234,3 +234,15 @@ tr:nth-child(even) {
 .top-button:hover {
     background: rgb(237, 237, 237);
 }
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .print-margin {
+      margin-top: 200px
+    }
+}

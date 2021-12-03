@@ -13,7 +13,7 @@
 <div id="app">
     <header>
         <div class="row title">
-            <div class="col col1 center">
+            <div class="col col1 center no-print">
                 <span class="avatar"></span>
             </div>
             <div class="col col6">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col6">
+            <div class="col col6 print-margin">
                 <div class="group">
                     <h3>Professional experience</h3>
                     <div class="experience">
@@ -108,7 +108,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div v-if="company.projects && company.projects.length">
+                                <div class="no-print" v-if="company.projects && company.projects.length">
                                     <button v-if="!opened" class="projects-button" @click="opened = company.id">
                                         <i class="fas fa-chevron-down"></i>
                                         Projects
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="group">
+                <div class="group print-margin">
                     <h3>Education</h3>
                     <div class="experience">
                         <div v-for="university in education" class="experience-item">
@@ -163,7 +163,7 @@
     <vue-gallery-slideshow :images="allImages.map(image => image.url)" :index="index" @close="index = null"></vue-gallery-slideshow>
     <footer>
         <span>© Timophey Akulich / 2021</span>
-        <a class="top-button" href="#app"><i class="fas fa-chevron-up"></i></a>
+        <a class="no-print top-button" href="#app"><i class="fas fa-chevron-up"></i></a>
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>

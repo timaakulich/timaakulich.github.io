@@ -33,7 +33,7 @@ h5 {
     float: left;
 }
 p {
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
     margin: 6px 0;
 }
@@ -144,7 +144,7 @@ p {
     margin: 5px 0;
 }
 ul {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a {
@@ -235,6 +235,9 @@ tr:nth-child(even) {
 .top-button:hover {
     background: rgb(237, 237, 237);
 }
+.hide {
+  display: none;
+}
 
 @media print
 {
@@ -244,6 +247,16 @@ tr:nth-child(even) {
     }
 
     .print-margin {
-      margin-top: 100px
+      margin-top: 150px
     }
+    .print-margin-x2 {
+      margin-top: 400px
+    }
+    .print {
+      display: block !important
+    }
+}
+
+p.responsibilities {
+  font-size: 16px
 }

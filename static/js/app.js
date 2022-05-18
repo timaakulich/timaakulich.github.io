@@ -26,11 +26,25 @@ window.app = new Vue({
         ],
         companies: [
             {
-                id: 1,
+                id: 5,
+                position: 'Senior Software Engineer',
+                name: 'Fitspire',
+                url: 'https://www.fitspire.app',
+                years: 'March 2022 - Present',
+                logo: 'static/img/fitspire_logo.jpeg',
+                responsibilities: [
+                    'Creating new apps from scratch and maintaining existing projects.',
+                    'Microservices development',
+                    'Backend development (server\'s side, API)',
+                    'Participation in release'
+                ]
+            },
+            {
+                id: 4,
                 position: 'Lead Software Engineer',
                 name: 'WARGAMING.NET',
                 url: 'https://wargaming.net',
-                years: 'June 2019 - Present',
+                years: 'June 2019 - March 2022',
                 logo: 'static/img/wg_logo.png',
                 responsibilities: [
                     'Team management (3 Backend developers, 2 Frontend developers)',
@@ -65,7 +79,7 @@ window.app = new Vue({
                 ]
             },
             {
-                id: 2,
+                id: 3,
                 position: 'Senior Python Developer',
                 name: 'WARGAMING.NET',
                 url: 'https://wargaming.net',
@@ -78,7 +92,7 @@ window.app = new Vue({
                 ]
             },
             {
-                id: 3,
+                id: 2,
                 position: 'Python Developer',
                 name: 'WARGAMING.NET',
                 url: 'https://wargaming.net',
@@ -94,7 +108,7 @@ window.app = new Vue({
                 ]
             },
             {
-                id: 4,
+                id: 1,
                 position: 'Python Web Developer',
                 name: 'RT PROJECTS',
                 url: 'https://razortheory.com/',

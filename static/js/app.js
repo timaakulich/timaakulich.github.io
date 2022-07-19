@@ -28,10 +28,10 @@ window.app = new Vue({
             {
                 id: 5,
                 position: 'Senior Software Engineer',
-                name: 'Fitspire',
-                url: 'https://www.fitspire.app',
+                name: 'MEAL',
+                url: 'https://mindful-eating.app',
                 years: 'March 2022 - Present',
-                logo: 'static/img/fitspire_logo.jpeg',
+                logo: 'static/img/meal_logo.png',
                 responsibilities: [
                     'Creating new apps from scratch and maintaining existing projects.',
                     'Microservices development',

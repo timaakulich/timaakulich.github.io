@@ -11,7 +11,8 @@ window.app = new Vue({
             "twisted", "flask", "sanic", "falcon", "celery",
             "SQLAlchemy", "gino",
             "sql", "mysql", "postgresql", "clickhouse", "mongodb",
-            "javascript", "vue", "react", "html", "css", "d3.js",
+            "javascript", "vue", "react", "redux", "redux-saga", "html",
+            "css", "d3.js",
             "redis", "memcached", "rabbitmq", "centrifugo",
             "Web Development", "Architecture Development", "Linux",
             "RESTful API", "XML rpc", "JSON rpc", "websockets"
@@ -80,7 +81,7 @@ window.app = new Vue({
             },
             {
                 id: 3,
-                position: 'Senior Python Developer',
+                position: 'Senior Software Engineer',
                 name: 'WARGAMING.NET',
                 url: 'https://wargaming.net',
                 years: 'February 2019 - June 2019',
@@ -93,7 +94,7 @@ window.app = new Vue({
             },
             {
                 id: 2,
-                position: 'Python Developer',
+                position: 'Software Engineer',
                 name: 'WARGAMING.NET',
                 url: 'https://wargaming.net',
                 years: 'January 2016 - February 2019',
@@ -102,14 +103,15 @@ window.app = new Vue({
                     'Creating new apps from scratch and maintaining existing projects.',
                     'Collaborated with the project team, designers, DevOps team and other teams of dependent projects',
                     'Microservices development',
-                    'Backend development (server\'s side, API)',
+                    'Back-end development (server\'s side, API)',
+                    'Front-end development (Vue.js, React.js)',
                     'Provided release\'s activities (setting tasks for performance testing, security testing; release testing)',
                     'Participation in release'
                 ]
             },
             {
                 id: 1,
-                position: 'Python Web Developer',
+                position: 'Web Developer',
                 name: 'RT PROJECTS',
                 url: 'https://razortheory.com/',
                 years: 'August 2014 - January 2016',

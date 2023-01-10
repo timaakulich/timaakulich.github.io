@@ -5,7 +5,7 @@ window.app = new Vue({
     },
     data: {
         index: null,
-        opened: null,
+        opened: {},
         skills: [
             "python", "asyncio", "aiohttp", "django", "fastapi", "tornado",
             "twisted", "flask", "sanic", "falcon", "celery",
@@ -15,7 +15,8 @@ window.app = new Vue({
             "css", "d3.js",
             "redis", "memcached", "rabbitmq", "centrifugo",
             "Web Development", "Architecture Development", "Linux",
-            "RESTful API", "XML rpc", "JSON rpc", "websockets"
+            "RESTful API", "XML rpc", "JSON rpc", "websockets", "AWS",
+            "EC2", "S3", "RDS", "DynamoDB", "Lambda", "SQS", "SNS",
         ],
         allImages: [
             {"id": 0, "url": "static/img/profile/1.png"},
@@ -24,14 +25,42 @@ window.app = new Vue({
             {"id": 3, "url": "static/img/tournaments/1.png"},
             {"id": 4, "url": "static/img/tournaments/2.png"},
             {"id": 5, "url": "static/img/tournaments/3.png"},
+            {"id": 6, "url": "static/img/loona/1.png"},
+            {"id": 7, "url": "static/img/loona/2.png"},
+            {"id": 8, "url": "static/img/loona/3.png"},
+            {"id": 9, "url": "static/img/loona/4.png"},
         ],
         companies: [
+            {
+                id: 6,
+                position: 'Senior Software Engineer',
+                name: 'Loóna',
+                url: 'https://loona.app',
+                years: 'December 2022',
+                logo: 'static/img/loona_logo.png',
+                responsibilities: [
+                    'Developing information systems by designing',
+                    'Problem areas investigations',
+                    'Backend development (server\'s side, API)'
+                ],
+                projects: [
+                    {
+                        description: "Contractor for the development of a service for generating pictures from a text description of a user\'s sleep.",
+                        images: [
+                            {"id": 6, "url": "static/img/loona/1.png"},
+                            {"id": 7, "url": "static/img/loona/2.png"},
+                            {"id": 8, "url": "static/img/loona/3.png"},
+                            {"id": 9, "url": "static/img/loona/4.png"},
+                        ]
+                    }
+                ]
+            },
             {
                 id: 5,
                 position: 'Senior Software Engineer',
                 name: 'MEAL',
                 url: 'https://mindful-eating.app',
-                years: 'March 2022 - Present',
+                years: 'March 2022 - December 2022',
                 logo: 'static/img/meal_logo.png',
                 responsibilities: [
                     'Creating new apps from scratch and maintaining existing projects.',

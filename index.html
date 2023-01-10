@@ -90,9 +90,6 @@
                            target="_blank">linkedin</a>
                     </div>
                 </div>
-                <div class="group">
-                    <p>More detailed information about my experience can be found in the <a href="https://akulich-cv.myportfolio.com" target="_blank">portfolio</a></p>
-                </div>
             </div>
             <div class="col col6">
                 <div class="group">
@@ -115,17 +112,17 @@
                                     </ul>
                                 </div>
                                 <div class="no-print" v-if="company.projects && company.projects.length">
-                                    <button v-if="!opened" class="projects-button" @click="opened = company.id">
+                                    <button v-if="!opened[company.id]" class="projects-button" @click="opened = {...opened, [company.id]: true}">
                                         <i class="fas fa-chevron-down"></i>
                                         Projects
                                         <i class="fas fa-chevron-down"></i>
                                     </button>
-                                    <button v-else  class="projects-button" @click="opened = null">
+                                    <button v-else class="projects-button" @click="opened = {...opened, [company.id]: false}">
                                         <i class="fas fa-chevron-up"></i>
                                         Projects
                                         <i class="fas fa-chevron-up"></i>
                                     </button>
-                                    <table v-if="opened === company.id" class="projects-table">
+                                    <table v-if="opened[company.id]" class="projects-table">
                                         <thead>
                                             <tr>
                                                 <th class="project-column">Project</th>

@@ -155,7 +155,7 @@ window.app = new Vue({
             {
                 degree: 'Master\'s degree, Master of Data Science',
                 name: 'HIGHER SCHOOL OF ECONOMICS',
-                years: 'September 2020 - Present',
+                years: 'September 2020 - August 2022',
                 logo: 'static/img/hse_logo.png',
             },
             {

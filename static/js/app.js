@@ -36,7 +36,7 @@ window.app = new Vue({
                 position: 'Senior Software Engineer',
                 name: 'Loóna',
                 url: 'https://loona.app',
-                years: 'December 2022',
+                years: 'December 2022 - July 2023',
                 logo: 'static/img/loona_logo.png',
                 responsibilities: [
                     'Developing information systems by designing',

@@ -32,6 +32,18 @@ window.app = new Vue({
         ],
         companies: [
             {
+                id: 7,
+                position: 'Senior Software Engineer',
+                name: 'Rabbit Games',
+                url: 'https://rabbitgames.pl',
+                years: 'July 2023 - Present',
+                logo: 'static/img/rabbit_logo.png',
+                responsibilities: [
+                    'Co-developer at Wargaming.net, developed backend services.',
+                    'Co-developer at MY.GAMES, developed Xbox and PlayStation authentication and payment systems for War Robots: Frontiers',
+                ],
+            },
+            {
                 id: 6,
                 position: 'Senior Software Engineer',
                 name: 'Loóna',

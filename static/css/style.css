@@ -254,6 +254,31 @@ tr:nth-child(even) {
     .print {
       display: block !important
     }
+    
+    .print-page-break {
+        page-break-before: always;
+        break-before: page;
+    }
+
+    .experience-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-top: -30px;
+        margin-left: -30px;
+        border-left: none;
+    }
+    
+    .experience-item-content {
+        position: static;
+        top: auto;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 15px;
+        margin-left: 0;
+    }
+    h1 {
+        font-size: 32px;
+    }
 }
 
 p.responsibilities {

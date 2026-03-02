@@ -30,7 +30,7 @@
                 <div class="group">
                     <h3>Profile</h3>
                     <p>
-                        Experienced Web Developer with over 11 years of experience working for enterprise companies, startups and projects.;
+                        Experienced Web Developer with over {{ new Date().getFullYear() - 2014 }} years of experience working for enterprise companies, startups and projects.
                     </p>
                     <p>
                         Had experience with back-end (Python) and front-end (JavaScript) development;
@@ -69,7 +69,7 @@
                     </div>
                     <div>
                         <h4>Address</h4>
-                        <p>Minsk, Belarus</p>
+                        <!-- <p>Minsk, Belarus</p> -->
                     </div>
                 </div>
                 <div class="group">
@@ -92,13 +92,13 @@
                 </div>
             </div>
             <div class="col col6">
-                <div class="group">
+                <div class="group print-page-break">
                     <h3>Professional experience</h3>
                     <div class="experience">
-                        <div v-for="company in companies" class="experience-item">
+                        <div v-for="company in filteredCompanies" class="experience-item">
                             <div class="experience-item-content">
                                 <div class="experience-item-company">
-                                    <img class="company-logo" :src="company.logo">
+<!--                                    <img class="company-logo" :src="company.logo">-->
                                     <h4>{{ company.position }}</h4>
                                     <a class="company-name" :href="company.url" target="_blank">{{ company.name }}</a>
                                     <span class="years">{{ company.years }}</span>
@@ -148,7 +148,7 @@
                 <div class="hide print">
 
                 </div>
-                <div class="group">
+                <div class="group print-page-break">
                     <h3>Education</h3>
                     <div class="experience">
                         <div v-for="university in education" class="experience-item">
